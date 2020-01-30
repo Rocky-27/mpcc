@@ -21,8 +21,8 @@ $GETMethods = [
 		'middleware' 	=> ['Admin'],
 	],
 	'/admin/orders' => [
-		'uses' 			=> 'Admin\AdminController',
-		'method'		=> 'orders',
+		'uses' 			=> 'Admin\OrderController',
+		'method'		=> 'index',
 		'middleware' 	=> ['Admin'],
 	],
 	'/admin/upload' => [
@@ -30,15 +30,10 @@ $GETMethods = [
 		'method'		=> 'uploadForm',
 		'middleware' 	=> ['Admin'],
 	],
-	'/customer' => [
-		'uses' 			=> 'Customer\CustomerController',
-		'method'		=> 'index',
-		'middleware' 	=> ['Customer'],
-	],
 	'/notes' => [
 		'uses' 			=> 'PageController',
 		'method'		=> 'notes',
-		'middleware' 	=> ['Customer'],
+		'middleware' 	=> [],
 	],
 ];
 
@@ -51,6 +46,11 @@ $POSTMethods = [
 	'/admin/store' => [
 		'uses' 			=> 'Admin\OrderController',
 		'method'		=> 'store',
+		'middleware' 	=> ['Admin','XSS'],
+	],
+	'/admin/store/confirm' => [
+		'uses' 			=> 'Admin\OrderController',
+		'method'		=> 'storeConfirm',
 		'middleware' 	=> ['Admin','XSS'],
 	],
 ];

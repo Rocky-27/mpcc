@@ -9,17 +9,15 @@ class ComposerStaticInit1d1070e91a19bac280de050e1f813d00
     public static $classMap = array (
         'MVC\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/MVC/Controllers/Admin/AdminController.php',
         'MVC\\Controllers\\Admin\\OrderController' => __DIR__ . '/../..' . '/MVC/Controllers/Admin/OrderController.php',
-        'MVC\\Controllers\\Customer\\CustomerController' => __DIR__ . '/../..' . '/MVC/Controllers/Customer/CustomerController.php',
         'MVC\\Controllers\\PageController' => __DIR__ . '/../..' . '/MVC/Controllers/PageController.php',
         'MVC\\Framework\\DB' => __DIR__ . '/../..' . '/MVC/Framework/DB.php',
-        'MVC\\Framework\\Request' => __DIR__ . '/../..' . '/MVC/Framework/Request.php',
         'MVC\\Framework\\View' => __DIR__ . '/../..' . '/MVC/Framework/View.php',
         'MVC\\Middleware\\Admin' => __DIR__ . '/../..' . '/MVC/Middleware/Admin.php',
-        'MVC\\Middleware\\Customer' => __DIR__ . '/../..' . '/MVC/Middleware/Customer.php',
         'MVC\\Middleware\\XSS' => __DIR__ . '/../..' . '/MVC/Middleware/XSS.php',
         'MVC\\Models\\Admin' => __DIR__ . '/../..' . '/MVC/Models/Admin.php',
-        'MVC\\Models\\Customer' => __DIR__ . '/../..' . '/MVC/Models/Customer.php',
         'MVC\\Models\\Order' => __DIR__ . '/../..' . '/MVC/Models/Order.php',
+        'MVC\\Validation\\OrderData' => __DIR__ . '/../..' . '/MVC/Validation/OrderData.php',
+        'MVC\\Validation\\Validate' => __DIR__ . '/../..' . '/MVC/Validation/Validate.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -3,9 +3,19 @@
 namespace MVC\Controllers\Admin;
 
 use MVC\Framework\View;
+use MVC\Models\Order;
 
 class OrderController
 {
+	/**
+	 * Returns the index view for all orders
+	 * @return type
+	 */
+	public function index()
+	{
+		return View::template('admin/orders/index');
+	}
+
 	/**
 	 * Returns the upload form view
 	 * @return type
@@ -27,8 +37,8 @@ class OrderController
 		$method = strtoupper($ext);
 
 		$path = __DIR__.'/../../../storage/uploads/latest_import.'.$ext;
-		move_uploaded_file($_FILES['upload']['name'], $path);
-		$data = $this->{'parse'.$method}($_FILES['upload']['tmp_name']);
+		move_uploaded_file($_FILES['upload']['tmp_name'], $path);
+		$data = $this->{'parse'.$method}($path);
 
 		return View::template('admin/upload-confirm', ['data' => $data, 'path' => $path]);
 	}
@@ -38,7 +48,17 @@ class OrderController
 	 * @return type
 	 */
 	public function storeConfirm()
-	{
+	{	
+		$path = $_POST['path'];
+		$segments = explode('.', $path);
+		$ext = end($segments);
+		$method = strtoupper($ext);
+
+		$data = $this->{'parse'.$method}($path);
+		$order = new Order;
+		$storeData = $order->normalise($data);
+
+		return header('Location:/admin/orders');
 
 	}
 

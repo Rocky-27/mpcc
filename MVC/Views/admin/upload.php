@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<div class="row py-5">
-		<div class="col-md-6 offset-md-3">
+		<div class="col-md-6">
 			<h2>Upload Form</h2>
 			<form action="/admin/store" method="post" enctype="multipart/form-data">
 				<div class="form-group">

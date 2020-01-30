@@ -16,7 +16,6 @@ class View
 
 		if(! is_file(__DIR__.'/../Views/'.$template)){
 			throw new \Exception('View not found at path '.$template);
-			
 		}
 
 		foreach($variables AS $key => $variable){
