@@ -127,7 +127,7 @@ class DB
 		$columnCount = count($columns);
 		$i = 1;
 
-		$query = 'SELECT count(*) FROM `'.$table.'` WHERE ';
+		$query = 'SELECT `id` FROM `'.$table.'` WHERE ';
 
 		foreach($columns AS $column){
 			$query.= '`'.$column.'` = "'.$data[$column].'" ';
