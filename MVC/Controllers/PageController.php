@@ -14,13 +14,4 @@ class PageController
 	{
 		return View::template('pages/index');
 	}
-
-	/**
-	 * Returns a notes page for the project
-	 * @return type
-	 */
-	public function notes()
-	{
-		return View::template('pages/notes');
-	}
 }

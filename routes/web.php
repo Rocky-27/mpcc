@@ -30,11 +30,6 @@ $GETMethods = [
 		'method'		=> 'uploadForm',
 		'middleware' 	=> ['Admin'],
 	],
-	'/notes' => [
-		'uses' 			=> 'PageController',
-		'method'		=> 'notes',
-		'middleware' 	=> [],
-	],
 ];
 
 $POSTMethods = [

@@ -2,6 +2,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h3>Data Preview</h3>
+			<div class="alert alert-info">Please make sure you are happy with the data formatting below and that the columns match up to the values correctly before confirming the upload.</div>
 		</div>
 	</div>
 	<div class="row">
