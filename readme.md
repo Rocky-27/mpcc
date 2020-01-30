@@ -7,6 +7,7 @@ Then navigate to MVC -> Framework -> DB.php and enter your database credentials
 
 Finally create the orders table using the query below: 
 
+```
 CREATE TABLE `orders` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `order_id` varchar(255) NOT NULL,
