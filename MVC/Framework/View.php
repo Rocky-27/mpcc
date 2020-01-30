@@ -12,13 +12,15 @@ class View
 	 */
 	public static function template(string $template, array $variables = [])
 	{
-		foreach($variables AS $key => $variable){
-			$$key = $variable;
-		}
+		$template = $template.'.php';
 
 		if(! is_file(__DIR__.'/../Views/'.$template)){
 			throw new \Exception('View not found at path '.$template);
 			
+		}
+
+		foreach($variables AS $key => $variable){
+			$$key = $variable;
 		}
 
 		require __DIR__.'/../Views/layout.php';

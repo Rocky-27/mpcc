@@ -12,6 +12,6 @@ class AdminController
 	 */
 	public function index()
 	{
-		return View::template('admin/index.php');
+		return View::template('admin/index');
 	}
 }

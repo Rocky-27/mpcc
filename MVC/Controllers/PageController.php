@@ -12,7 +12,7 @@ class PageController
 	 */
 	public function index()
 	{
-		return View::template('pages/index.php');
+		return View::template('pages/index');
 	}
 
 	/**
@@ -21,6 +21,6 @@ class PageController
 	 */
 	public function notes()
 	{
-		return View::template('pages/notes.php');
+		return View::template('pages/notes');
 	}
 }

@@ -57,7 +57,7 @@ $POSTMethods = [
 
 if(isset($$route) && is_array($$route)){
 	if(! isset($$route[$uri])){
-		throw new Exception($method.' route has not been defined for '.$uri);
+		throw new Exception($_SERVER['REQUEST_METHOD'].' route has not been defined for '.$uri);
 	}
 
 	foreach($$route[$uri]['middleware'] AS $middleware){
